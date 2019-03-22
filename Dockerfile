@@ -1,7 +1,7 @@
 FROM wernight/duplicity:latest
 
 RUN set -x \
- && apk add --no-cache py-pip
+ && apk add --no-cache py-pip \
  && apk del --purge py-pip \
  && pip install azure
 
