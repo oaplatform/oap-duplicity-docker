@@ -5,6 +5,7 @@ USER root
 RUN set -x \
  && apk add --no-cache py-pip \
  && pip install azure \
+ && pip install azure-storage \
  && apk del --purge py-pip
 
 VOLUME ["/home/duplicity/.cache/duplicity", "/home/duplicity/.gnupg"]
