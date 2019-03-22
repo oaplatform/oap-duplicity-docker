@@ -20,8 +20,10 @@ RUN set -x \
 
 RUN set -x \
  && apk add --no-cache py-pip \
- && pip install pipenv azure azure-storage-blob \
+ && pip install pipenv \
  && pipenv install --system --deploy \
+ && pip install azure \
+ && pip install azure-storage-blob \
  && apk del --purge py-pip \
  && adduser -D -u 1896 duplicity \
  && mkdir -p /home/duplicity/.cache/duplicity \
