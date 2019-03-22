@@ -28,5 +28,4 @@ RUN set -x \
 
 VOLUME ["/root/.cache/duplicity", "/root/.gnupg"]
 
-
-CMD ["duplicity"]
+ENTRYPOINT duplicity
